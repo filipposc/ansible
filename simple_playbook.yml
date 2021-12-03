@@ -1,6 +1,6 @@
 ---
 - name: Install nginx
-  hosts:  centos_nodes
+  hosts:  centos_nodes,ubuntu_nodes
   become: yes
 
   tasks:
@@ -9,7 +9,7 @@
         name: nginx
         state: latest
     - name: Start nginx service
-      service:
+      package:
         name: nginx
         state: started
         enabled: yes 
