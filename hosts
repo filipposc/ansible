@@ -16,12 +16,11 @@
 ## 192.168.100.10
 
 # Ex 2: A collection of hosts belonging to the 'webservers' group
+[centos_nodes]
+127.0.0.1 ansible_connection=local
 
-## [webservers]
-## alpha.example.org
-## beta.example.org
-## 192.168.1.100
-## 192.168.1.110
+[ubuntu_nodes]
+40.69.200.74 ansible_user=codehub
 
 # If you have multiple hosts following a pattern you can specify
 # them like this:
