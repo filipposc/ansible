@@ -1,7 +1,7 @@
 ---
 
 - name: Strategies example
-  hosts: linux_nodes
+  hosts: all #linux_nodes
   become: yes
   gather_facts: linux_nodes
 
