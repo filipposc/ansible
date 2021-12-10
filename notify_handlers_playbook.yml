@@ -21,15 +21,15 @@
       when: ansible_os_family == 'RedHat'  
 
       - name: Copy Debian files
-      copy: 
-        src: "{{ item.src }}"
-        dest: "{{ item.dest }}"
-      loop: 
-        - { src: 'debian-files/dfile1.txt', dest: '/etc/myfolder/'}
-        - { src: 'debian-files/dfile2.txt', dest: '/etc/myfolder/'}
-      notify: 
+        copy: 
+          src: "{{ item.src }}"
+          dest: "{{ item.dest }}"
+        loop: 
+          - { src: 'debian-files/dfile1.txt', dest: '/etc/myfolder/'}
+          - { src: 'debian-files/dfile2.txt', dest: '/etc/myfolder/'}
+        notify: 
         - Debian files copied
-      when: ansible_os_family == 'Debian'  
+        when: ansible_os_family == 'Debian'  
 
   handlers: 
     - name: RedHat files copied
