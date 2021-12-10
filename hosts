@@ -22,6 +22,12 @@
 [ubuntu_nodes]
 40.69.200.74 ansible_user=codehub
 
+[ubuntu_nodes:vars]
+ansible_user=codehub
+
+[linux_nodes:children]
+centos_nodes
+ubuntu_nodes
 # If you have multiple hosts following a pattern you can specify
 # them like this:
 
