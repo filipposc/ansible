@@ -8,16 +8,16 @@ gather_facts: linux_nodes
 
 tasks:
 
-  -name: Ping targets
-   ping:
+  - name: Ping targets
+    ping:
 
-  -name: Sleep for 3 seconds
-   shell: "sleep 3"
+  - name: Sleep for 3 seconds
+    shell: "sleep 3"
 
-  -name: Uptime
-  command: "uptime"
-  register: result
+  - name: Uptime
+    command: "uptime"
+    register: result
 
-  -name: Print uptime information
-   debug:
-     var: result.stdout
+  - name: Print uptime information
+    debug:
+      var: result.stdout
